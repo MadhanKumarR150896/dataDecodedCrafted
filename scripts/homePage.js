@@ -1,4 +1,6 @@
 
+subTitleAnimation();
+
 const headerRight = document.querySelector('.header-right');
 const menuButton = document.querySelector('.menu-button');
 const overlay = document.querySelector('.overlay');
@@ -32,3 +34,34 @@ document.addEventListener('keydown', (event) => {
     closeMenu();
   }
 });
+
+
+
+function subTitleAnimation() {
+  let subTitle = document.querySelector('.sub-title');
+  const subTitleText = subTitle.textContent;
+
+  function repeatAnimation() {
+    subTitle.textContent = "";
+    [...subTitleText].forEach((letter, i) => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      span.style.animationDelay = `${1 + i * 0.18}s`
+      subTitle.appendChild(span);
+    });
+
+    setTimeout(() => {
+      repeatAnimation();
+    }, 7000)
+  }
+
+  repeatAnimation();
+}
+
+
+
+
+
+
+
+
