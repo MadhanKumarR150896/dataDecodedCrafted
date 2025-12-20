@@ -155,11 +155,10 @@
   }
 
   :root {
-    --c-lava-600: hsl(6, 100%, 56%);
     --c-navy-900: hsl(193, 55%, 10%);
     --c-oat-medium: hsl(48, 13%, 92%);
     --c-oat-light: hsl(36, 29%, 97%);
-
+    --c-off-white: hsl(0 0% 97.6%);
     --c-grayish-blue: hsl(233, 8%, 79%);
     --c-dark-grayish-blue: hsl(236, 13%, 42%);
 
@@ -195,6 +194,7 @@
     font-family: "DM Sans", Arial, Helvetica, sans-serif;
     font-size: var(--fs-16);
     font-weight: 400;
+    background-color: var(--c-off-white);
   }
 
   input,
@@ -447,7 +447,7 @@
     font-weight: 300;
     font-size: var(--fs-18);
     margin-block-end: 0.75rem;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: var(--c-navy-900);
     color: var(--c-oat-light);
   }
@@ -463,18 +463,6 @@
     background-color: var(--c-oat-light);
     border-radius: 2px;
     border: 1px solid var(--c-grayish-blue);
-  }
-
-  .main-content a,
-  .explore-section a {
-    text-decoration: none;
-    color: var(--c-navy-900);
-  }
-
-  .f-brick-layout:hover a,
-  .n-brick-layout:hover a,
-  .e-brick-layout:hover a {
-    text-decoration: 2px underline;
   }
 
   .featured-section {
@@ -494,9 +482,11 @@
   .f-brick-layout,
   .n-brick-layout,
   .e-brick-layout {
-    box-shadow: 0 0 2px var(--c-navy-900);
+    position: relative;
+    border: 2px solid var(--c-grayish-blue);
     padding: 0.5rem;
     border-radius: 2px;
+    background-color: hsl(0 0% 97.6%);
   }
 
   .n-brick-layout {
@@ -509,11 +499,38 @@
     box-shadow: 0 0 5px var(--c-navy-900);
   }
 
+  .brick-details {
+    display: grid;
+  }
 
   .brick-title {
     font-size: var(--fs-18);
     padding-block: 0.5rem;
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brick-link {
+    text-decoration: none;
+    color: var(--c-navy-900);
+  }
+
+  .f-brick-layout:hover .brick-link,
+  .n-brick-layout:hover .brick-link,
+  .e-brick-layout:hover .brick-link {
+    text-decoration: 2px underline;
+  }
+
+  .brick-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
   }
 
   .brick-date {
@@ -525,11 +542,19 @@
   .e-brick-layout .brick-title {
     font-size: var(--fs-16);
     padding-block: 0.65rem;
+    line-height: 1.2;
+    max-height: calc(2.4em + 0.65rem);
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
   .n-brick-layout .brick-date,
   .e-brick-layout .brick-date {
     font-size: var(--fs-14);
+    padding-block-start: 0.8rem;
   }
 
   .brick-thumbnail {
