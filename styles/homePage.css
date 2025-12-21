@@ -241,6 +241,11 @@
   .ddc-logo {
     width: calc(112/16 * 1rem);
     height: auto;
+    padding-block: 0.2rem;
+  }
+
+  .ddc-logo:hover {
+    background-color: var(--c-oat-medium);
   }
 
   .header-right {
@@ -267,12 +272,12 @@
     text-decoration: none;
     font-weight: 500;
     color: var(--c-navy-900);
-    padding: 2.4rem 1.4rem 2rem;
-    transition: color 150ms ease-in-out;
+    padding: 2.5rem 1.5rem 2.1rem;
+    transition: background-color 150ms ease-in-out;
   }
 
   .nav-links>li>a:hover {
-    color: var(--c-dark-grayish-blue);
+    background-color: var(--c-oat-medium);
   }
 
   @media (width < calc(768/16 * 1rem)) {
@@ -280,6 +285,7 @@
     .ddc-logo {
       width: calc(96/16 * 1rem);
       height: auto;
+      padding-block: 0.6rem;
     }
 
     .menu-button {
@@ -295,8 +301,6 @@
       justify-content: flex-start;
       position: fixed;
       min-height: 100%;
-      padding-block-start: 2.1rem;
-      padding-inline: 2.1rem;
       top: 0;
       right: 0;
       left: 120%;
@@ -306,7 +310,8 @@
 
     .close-button {
       display: flex;
-      margin-block-end: 2rem;
+      margin-inline-start: 2.1rem;
+      margin-block: 2.1rem;
     }
 
     .nav-links {
@@ -314,7 +319,8 @@
     }
 
     .nav-links>li>a {
-      padding: 1.5rem 0;
+      padding-inline: 2.5rem;
+      padding-block: 1.5rem;
     }
 
     .header-right.visible {
@@ -410,7 +416,7 @@
     background-size: auto;
     padding-inline: 4rem;
     padding-block: 0.7rem;
-    border-radius: 2px;
+    border-radius: 5px;
     border: 1px solid var(--c-navy-900);
   }
 
@@ -424,7 +430,7 @@
 
   .search-button {
     background-color: var(--c-oat-light);
-    border-radius: 2px;
+    border-radius: 5px;
     padding-inline: 3rem;
     padding-block: 0.7rem;
     cursor: pointer;
@@ -447,11 +453,10 @@
     font-weight: 300;
     font-size: var(--fs-18);
     margin-block-end: 0.75rem;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: var(--c-navy-900);
     color: var(--c-oat-light);
   }
-
 
   .main-content {
     display: grid;
@@ -461,7 +466,7 @@
   .main-content>* {
     padding: 2rem;
     background-color: var(--c-oat-light);
-    border-radius: 2px;
+    border-radius: 5px;
     border: 1px solid var(--c-grayish-blue);
   }
 
@@ -485,7 +490,7 @@
     position: relative;
     border: 2px solid var(--c-grayish-blue);
     padding: 0.5rem;
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: hsl(0 0% 97.6%);
   }
 
@@ -561,6 +566,10 @@
     position: relative;
   }
 
+  .brick-thumbnail>img {
+    border-radius: 5px 5px 0 0;
+  }
+
   .f-brick-layout .brick-tag {
     position: absolute;
     padding: 0.5rem 1rem;
@@ -589,7 +598,7 @@
     padding: 2rem;
     background-color: var(--c-oat-light);
     margin-block: 1rem 2rem;
-    border-radius: 2px;
+    border-radius: 5px;
     border: 1px solid var(--c-grayish-blue);
   }
 

@@ -46,7 +46,7 @@ function subTitleAnimation() {
     [...subTitleText].forEach((letter, i) => {
       const span = document.createElement('span');
       span.textContent = letter;
-      span.style.animationDelay = `${1 + i * 0.18}s`
+      span.style.animationDelay = `${3 + i * 0.18}s`
       subTitle.appendChild(span);
     });
 
