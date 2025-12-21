@@ -1,0 +1,107 @@
+.header {
+  height: calc(96/16 * 1rem);
+  background-color: var(--c-oat-light);
+  border-bottom: 1px solid var(--c-grayish-blue);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+}
+
+.ddc-logo {
+  width: calc(112/16 * 1rem);
+  height: auto;
+  padding-block: 0.2rem;
+}
+
+.ddc-logo:hover {
+  background-color: var(--c-oat-medium);
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-button,
+.close-button {
+  display: none;
+  width: 2rem;
+  height: auto;
+  background: inherit;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links>li>a {
+  display: flex;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--c-navy-900);
+  padding: 2.5rem 1.5rem 2.1rem;
+  transition: background-color 150ms ease-in-out;
+}
+
+.nav-links>li>a:hover {
+  background-color: var(--c-oat-medium);
+}
+
+@media (width < calc(768/16 * 1rem)) {
+
+  .ddc-logo {
+    width: calc(96/16 * 1rem);
+    height: auto;
+    padding-block: 0.6rem;
+  }
+
+  .menu-button {
+    display: flex;
+    margin-block-start: 5px;
+    margin-inline-end: 18px;
+  }
+
+  .header-right {
+    background-color: var(--c-oat-light);
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    left: 120%;
+    transition: left 750ms ease-in-out;
+    z-index: 99;
+  }
+
+  .close-button {
+    display: flex;
+    margin-inline-start: 2.1rem;
+    margin-block: 2.1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links>li>a {
+    padding-inline: 2.5rem;
+    padding-block: 1.5rem;
+  }
+
+  .header-right.visible {
+    top: 0;
+    right: 0;
+    left: 40%;
+  }
+}
