@@ -90,6 +90,11 @@
     margin-block: 2.1rem;
   }
 
+  .menu-button:focus-visible,
+  .close-button:focus-visible {
+    outline: 1px solid var(--c-navy-900)
+  }
+
   .nav-links {
     flex-direction: column;
   }

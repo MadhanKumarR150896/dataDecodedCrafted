@@ -29,7 +29,7 @@ class GlobalHeader extends HTMLElement {
             <ul class="nav-links">
               <li><a href="/">Home</a></li>
               <li><a href="#explore-section">Explore</a></li>
-              <li><a href="">About</a></li>
+              <li><a href="/">About</a></li>
             </ul>
           </nav>
         </div>
@@ -70,7 +70,8 @@ class GlobalHeader extends HTMLElement {
       }
       if (
         (event.target.closest(".close-button") ||
-          event.target.closest(".overlay")) &&
+          event.target.closest(".overlay") ||
+          event.target.closest(".nav-links")) &&
         this.headerRight.classList.contains("visible")
       ) {
         this.closeMenu();
