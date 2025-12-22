@@ -19,35 +19,15 @@
   <link rel="icon" href="./assets/images/DDC_logo.png" type="image/png">
 
   <link rel="stylesheet" href="/src/index.css">
+
+  <script type="module" src="/src/components/header.js"></script>
+  <script type="module" src="/src/components/footer.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </head>
 
 <body>
 
-  <header class="header wrapper">
-    <div class="header-content">
-      <a class="header-left" href="/">
-        <img class="ddc-logo" src="/images/DDC_logo.png" alt="DDC_Logo">
-      </a>
-
-      <button class="menu-button">
-        <img class="menu-icon" src="/images/menu-icon.svg" alt="">
-      </button>
-
-      <nav class="header-right">
-        <button class="close-button">
-          <img class="close-icon" src="/images/close-icon.svg" alt="">
-        </button>
-
-        <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="#explore-section">Explore</a></li>
-          <li><a href="">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div class="overlay"></div>
+  <global-header></global-header>
 
   <main class="main wrapper">
 
@@ -247,17 +227,8 @@
 
   </main>
 
-  <footer class="footer wrapper">
-    <div class="footer-content">
-      <a href="">
-        <img class="linkedin-icon" src="/images/linkedin-icon.svg" alt="LinkedIn_Icon">
-      </a>
+  <global-footer></global-footer>
 
-      <p>&copy; 2025 Data Decoded & Crafted &#124; All rights reserved</p>
-    </div>
-  </footer>
-
-  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
