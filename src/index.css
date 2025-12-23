@@ -1,7 +1,0 @@
-@layer global, header, overlay, main, footer;
-
-@import './layers/global.css' layer(global);
-@import './layers/header.css' layer(header);
-@import './layers/overlay.css' layer(overlay);
-@import './layers/main.css' layer(main);
-@import './layers/footer.css' layer(footer);
