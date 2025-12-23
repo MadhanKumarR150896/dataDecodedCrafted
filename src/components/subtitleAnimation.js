@@ -1,5 +1,8 @@
 export function subtitleAnimation() {
   let subTitle = document.querySelector(".sub-title");
+
+  if (!subTitle) return;
+
   const subTitleText = subTitle.textContent;
 
   function repeatAnimation() {

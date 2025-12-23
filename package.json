@@ -13,5 +13,8 @@
   "description": "",
   "devDependencies": {
     "vite": "^7.3.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.19"
   }
 }
