@@ -70,11 +70,25 @@ class GlobalHeader extends HTMLElement {
       }
       if (
         (event.target.closest(".close-button") ||
-          event.target.closest(".overlay") ||
-          event.target.closest(".nav-links")) &&
+          event.target.closest(".overlay")) &&
         this.headerRight.classList.contains("visible")
       ) {
         this.closeMenu();
+        return;
+      }
+      if (
+        event.target.closest(".nav-links a") &&
+        this.headerRight.classList.contains("visible")
+      ) {
+        const link = event.target.closest(".nav-links a").getAttribute("href");
+
+        event.preventDefault();
+
+        this.closeMenu();
+
+        setTimeout(() => {
+          window.location.href = link;
+        }, 800);
       }
     });
 
