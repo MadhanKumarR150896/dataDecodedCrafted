@@ -1,10 +1,13 @@
 import { posts } from "../../data/mockPosts.js";
+import { sortPostArray } from "./utils/sortPosts.js";
 import dayjs from "dayjs";
 
 export function renderRecentPosts() {
   if (!posts || posts.length === 0) return;
 
-  const recentPostHTML = posts
+  const recentPosts = sortPostArray(posts);
+
+  const recentPostHTML = recentPosts
     .map((post) => {
       return `
         <article class="e-brick-layout">

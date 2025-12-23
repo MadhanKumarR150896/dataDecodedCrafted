@@ -58,7 +58,7 @@ export const posts = [
     createdAt: "1762851149",
     tag: "Tag - 2",
     keywords: ["technology", "engineering", "platform"],
-    featured: false,
+    featured: true,
   },
   {
     id: "7",
