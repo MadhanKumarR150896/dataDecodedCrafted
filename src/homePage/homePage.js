@@ -6,8 +6,7 @@ import { renderRecentPosts } from "./scripts/recentPosts.js";
 
 async function loadHomePage() {
   subtitleAnimation();
-  await fetchFeaturedPost();
-  await fetchNewAndRecentPosts();
+  await Promise.all([fetchFeaturedPost(), fetchNewAndRecentPosts()]);
   renderFeaturedPost();
   renderNewPosts();
   renderRecentPosts();
