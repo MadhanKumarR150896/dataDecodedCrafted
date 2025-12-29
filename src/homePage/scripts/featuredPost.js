@@ -20,9 +20,9 @@ export async function renderFeaturedPost() {
             <h3 class="brick-title">
               <a href="" class="brick-link">${featuredPost.title}</a>
             </h3>
-            <p class="brick-date">${dayjs
-              .unix(featuredPost.createdAt)
-              .format("MMMM DD, YYYY")}</p>
+            <p class="brick-date">${dayjs(featuredPost.publishedAt).format(
+              "MMMM DD, YYYY"
+            )}</p>
           </div>
         </article>
       `;
