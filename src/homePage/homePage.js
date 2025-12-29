@@ -3,7 +3,11 @@ import { renderFeaturedPost } from "./scripts/featuredPost.js";
 import { renderNewPosts } from "./scripts/newPosts.js";
 import { renderRecentPosts } from "./scripts/recentPosts.js";
 
-subtitleAnimation();
-renderFeaturedPost();
-renderNewPosts();
-renderRecentPosts();
+async function loadHomePage() {
+  subtitleAnimation();
+  await renderFeaturedPost();
+  renderNewPosts();
+  renderRecentPosts();
+}
+
+loadHomePage();

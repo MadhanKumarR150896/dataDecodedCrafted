@@ -1,17 +1,19 @@
-import { sortedPosts } from "../../../data/mockPosts";
+import { fetchFeaturedPost } from "../../../data/posts";
+import { urlFor } from "../../../data/sanity";
+
 import dayjs from "dayjs";
 
-export function renderFeaturedPost() {
-  if (!sortedPosts || sortedPosts.length === 0) return;
+export async function renderFeaturedPost() {
+  const featuredPost = await fetchFeaturedPost();
 
-  const featuredPost = sortedPosts.find((post) => {
-    return post.featured;
-  });
+  if (!featuredPost || featuredPost.length === 0) return;
 
   const featuredPostHtml = `
         <article class="f-brick-layout">
           <div class="brick-thumbnail">
-            <img src="${featuredPost.image}" alt="Content-Image">
+            <img src="${urlFor(featuredPost.image)}" alt="${
+    featuredPost.image.alt
+  }">
             <div class="brick-tag">${featuredPost.tag}</div>
           </div>
           <div class="brick-details">

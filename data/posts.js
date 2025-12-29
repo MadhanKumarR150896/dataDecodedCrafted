@@ -9,7 +9,7 @@ export async function fetchNewAndRecentPosts() {
   return posts;
 }
 
-export let featuredPost;
+export let featuredPost = "";
 
 const queryFeaturedPost = `*[_type == 'post' && featured] | order(publishedAt desc) [0...1] {_id, author, featured, publishedAt,"slug": slug.current, title,"tag": postTag->tag, image}[0]`;
 
