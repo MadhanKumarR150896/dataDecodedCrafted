@@ -1,11 +1,9 @@
-import { fetchFeaturedPost } from "../../../data/posts";
+import { featuredPost } from "../../../data/posts";
 import { urlFor } from "../../../data/sanity";
 
 import dayjs from "dayjs";
 
-export async function renderFeaturedPost() {
-  const featuredPost = await fetchFeaturedPost();
-
+export function renderFeaturedPost() {
   if (!featuredPost || featuredPost.length === 0) return;
 
   const featuredPostHtml = `
