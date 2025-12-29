@@ -1,26 +1,27 @@
-import { sortedPosts } from "../../../data/mockPosts";
+import { posts } from "../../../data/posts.js";
+import { urlFor } from "../../../data/sanity.js";
 import dayjs from "dayjs";
 
 export function renderNewPosts() {
-  if (!sortedPosts || sortedPosts.length === 0) return;
+  if (!posts || posts.length === 0) return;
 
-  const newPosts = sortedPosts.slice(0, 2);
+  const newPosts = posts.slice(0, 2);
 
   const newPostsHTML = newPosts
     .map((post) => {
       return `
         <article class="n-brick-layout">
           <div class="brick-thumbnail">
-            <img src="${post.image}" alt="Content-Image">
+            <img src="${urlFor(post.image)}" alt="${post.image.alt}">
             <div class="brick-tag">${post.tag}</div>
           </div>
           <div class="brick-details">
             <h3 class="brick-title">
               <a href="" class="brick-link">${post.title}</a>
             </h3>
-            <p class="brick-date">${dayjs
-              .unix(post.createdAt)
-              .format("MMMM DD, YYYY")}</p>
+            <p class="brick-date">${dayjs(post.publishedAt).format(
+              "MMMM DD, YYYY"
+            )}</p>
           </div>
         </article>
       `;
