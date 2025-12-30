@@ -1,7 +1,4 @@
 import { featuredPost } from "../../../data/posts";
-import { urlFor } from "../../../data/sanity";
-
-import dayjs from "dayjs";
 
 export function renderFeaturedPost() {
   if (!featuredPost || featuredPost.length === 0) return;
@@ -9,18 +6,14 @@ export function renderFeaturedPost() {
   const featuredPostHtml = `
         <article class="f-brick-layout">
           <div class="brick-thumbnail">
-            <img src="${urlFor(featuredPost.image)}" alt="${
-    featuredPost.image.alt
-  }">
+            <img src="${featuredPost.getUrl()}" alt="${featuredPost.image.alt}">
             <div class="brick-tag">${featuredPost.tag}</div>
           </div>
           <div class="brick-details">
             <h3 class="brick-title">
               <a href="" class="brick-link">${featuredPost.title}</a>
             </h3>
-            <p class="brick-date">${dayjs(featuredPost.publishedAt).format(
-              "MMMM DD, YYYY"
-            )}</p>
+            <p class="brick-date">${featuredPost.getDateString()}</p>
           </div>
         </article>
       `;

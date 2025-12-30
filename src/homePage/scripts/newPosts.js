@@ -1,6 +1,4 @@
 import { posts } from "../../../data/posts.js";
-import { urlFor } from "../../../data/sanity.js";
-import dayjs from "dayjs";
 
 export function renderNewPosts() {
   if (!posts || posts.length === 0) return;
@@ -12,16 +10,14 @@ export function renderNewPosts() {
       return `
         <article class="n-brick-layout">
           <div class="brick-thumbnail">
-            <img src="${urlFor(post.image)}" alt="${post.image.alt}">
+            <img src="${post.getUrl()}" alt="${post.image.alt}">
             <div class="brick-tag">${post.tag}</div>
           </div>
           <div class="brick-details">
             <h3 class="brick-title">
               <a href="" class="brick-link">${post.title}</a>
             </h3>
-            <p class="brick-date">${dayjs(post.publishedAt).format(
-              "MMMM DD, YYYY"
-            )}</p>
+            <p class="brick-date">${post.getDateString()}</p>
           </div>
         </article>
       `;

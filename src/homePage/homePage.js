@@ -6,7 +6,13 @@ import { renderRecentPosts } from "./scripts/recentPosts.js";
 
 async function loadHomePage() {
   subtitleAnimation();
-  await Promise.all([fetchFeaturedPost(), fetchNewAndRecentPosts()]);
+  try {
+    await Promise.all([fetchFeaturedPost(), fetchNewAndRecentPosts()]);
+  } catch (error) {
+    console.log("Unexpected error. Please try again");
+    console.log(error);
+  }
+
   renderFeaturedPost();
   renderNewPosts();
   renderRecentPosts();
