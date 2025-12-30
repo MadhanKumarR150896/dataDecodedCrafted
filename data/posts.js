@@ -27,24 +27,20 @@ class Post {
   }
 }
 
-export let posts = [];
-
-const queryNewAndRecentPosts = `*[_type == 'post'] | order(publishedAt desc) [0...10] {"id":_id,publishedAt,"slug": slug.current,title,"tag": postTag->tag,image}`;
+const queryProjection = `{"id":_id,publishedAt,"slug": slug.current,title,"tag": postTag->tag,image}`;
 
 export async function fetchNewAndRecentPosts() {
-  const data = await client.fetch(queryNewAndRecentPosts);
-  posts = data.map((postData) => {
+  const data = await client.fetch(
+    `*[_type == 'post'] | order(publishedAt desc)[0...10]${queryProjection}`
+  );
+  return data.map((postData) => {
     return new Post(postData);
   });
-  return posts;
 }
 
-export let featuredPost = "";
-
-const queryFeaturedPost = `*[_type == 'post' && featured] | order(publishedAt desc)[0] {"id":_id,publishedAt,"slug": slug.current,title,"tag": postTag->tag,image}`;
-
 export async function fetchFeaturedPost() {
-  const postData = await client.fetch(queryFeaturedPost);
-  featuredPost = new Post(postData);
-  return featuredPost;
+  const postData = await client.fetch(
+    `*[_type == 'post' && featured] | order(publishedAt desc)[0]${queryProjection}`
+  );
+  return new Post(postData);
 }
