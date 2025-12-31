@@ -1,16 +1,25 @@
 import { subtitleAnimation } from "./scripts/subtitleAnimation.js";
 import { fetchFeaturedPost, fetchNewAndRecentPosts } from "../../data/posts.js";
-import { renderMainSection } from "./scripts/main.js";
+import { renderContentSection } from "./scripts/content.js";
 
 async function loadHomePage() {
   subtitleAnimation();
   try {
-    const [featuredPost, latestPosts] = await Promise.all([
+    const response = await Promise.allSettled([
       fetchFeaturedPost(),
       fetchNewAndRecentPosts(),
     ]);
 
-    renderMainSection({ featuredPost, latestPosts });
+    let featuredPost =
+      response[0].status === "fulfilled" && response[0].value !== null
+        ? response[0].value
+        : null;
+    let latestPosts =
+      response[1].status === "fulfilled" && response[1].value !== null
+        ? response[1].value
+        : [];
+
+    renderContentSection({ featuredPost, latestPosts });
   } catch (error) {
     console.log("Unexpected error: Please try again");
     console.log(error);
