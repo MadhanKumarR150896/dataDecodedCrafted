@@ -1,3 +1,6 @@
+import { urlFor } from "../../../data/sanity";
+import dayjs from "dayjs";
+
 export function renderContentSection(allPosts) {
   const { featuredPost, latestPosts } = allPosts;
 
@@ -34,7 +37,18 @@ export function renderContentSection(allPosts) {
 function renderFeaturedPost(post) {
   return ` 
     <article class="f-brick-layout">
-      ${postHtml(post)}
+      <div class="brick-thumbnail">
+        <img src="${urlFor(post.image).url()}" alt="${post.image.alt}">
+        <div class="brick-tag">${post.tag}</div>
+      </div>
+      <div class="brick-details">
+        <h3 class="brick-title">
+          <a href="" class="brick-link">${post.title}</a>
+        </h3>
+        <p class="brick-date">${dayjs(post.publishedAt).format(
+          "MMMM DD, YYYY"
+        )}</p>
+      </div> 
     </article>
   `;
 }
@@ -42,7 +56,18 @@ function renderFeaturedPost(post) {
 function renderNewPost(post) {
   return ` 
     <article class="n-brick-layout">
-      ${postHtml(post)}
+      <div class="brick-thumbnail">
+        <img src="${urlFor(post.image).url()}" alt="${post.image.alt}">
+        <div class="brick-tag">${post.tag}</div>
+      </div>
+      <div class="brick-details">
+        <h3 class="brick-title">
+          <a href="" class="brick-link">${post.title}</a>
+        </h3>
+        <p class="brick-date">${dayjs(post.publishedAt).format(
+          "MMMM DD, YYYY"
+        )}</p>
+      </div> 
     </article>
   `;
 }
@@ -50,22 +75,18 @@ function renderNewPost(post) {
 function renderRecentPost(post) {
   return ` 
     <article class="r-brick-layout">
-      ${postHtml(post)}
+      <div class="brick-thumbnail">
+        <img src="${urlFor(post.image).url()}" alt="${post.image.alt}">
+        <div class="brick-tag">${post.tag}</div>
+      </div>
+      <div class="brick-details">
+        <h3 class="brick-title">
+          <a href="" class="brick-link">${post.title}</a>
+        </h3>
+        <p class="brick-date">${dayjs(post.publishedAt).format(
+          "MMMM DD, YYYY"
+        )}</p>
+      </div> 
     </article>
-  `;
-}
-
-function postHtml(post) {
-  return `
-    <div class="brick-thumbnail">
-      <img src="${post.getUrl()}" alt="${post.image.alt}">
-      <div class="brick-tag">${post.tag}</div>
-    </div>
-    <div class="brick-details">
-      <h3 class="brick-title">
-        <a href="" class="brick-link">${post.title}</a>
-      </h3>
-      <p class="brick-date">${post.getDateString()}</p>
-    </div> 
   `;
 }

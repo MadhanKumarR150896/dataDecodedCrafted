@@ -8,7 +8,7 @@ class GlobalFooter extends HTMLElement {
       <footer class="footer wrapper">
         <div class="footer-content">
           <a href="">
-            <img class="linkedin-icon" src="/images/linkedin-icon.svg" alt="LinkedIn_Icon">
+            <img class="linkedin-icon" src="/images/linkedin-icon.svg" width='40' height='40' alt="LinkedIn_Icon">
           </a>
 
           <p>&copy; 2025 Data Decoded & Crafted &#124; All rights reserved</p>

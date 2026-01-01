@@ -112,6 +112,13 @@
   border: 1px solid var(--c-grayish-blue);
 }
 
+.main-content img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
 .featured-section {
   grid-column: 1 / span 3;
 }
@@ -134,10 +141,6 @@
   padding: 0.5rem;
   border-radius: 5px;
   background-color: hsl(0 0% 97.6%);
-}
-
-.n-brick-layout {
-  max-width: calc(280/16 * 1rem);
 }
 
 .f-brick-layout:hover,

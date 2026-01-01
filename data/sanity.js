@@ -14,5 +14,5 @@ export const builder = createImageUrlBuilder({
 });
 
 export function urlFor(source) {
-  return builder.image(source).auto("format").url();
+  return builder.image(source).auto("format").fit("crop");
 }

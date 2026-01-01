@@ -14,16 +14,16 @@ class GlobalHeader extends HTMLElement {
       <header class="header wrapper">
         <div class="header-content">
           <a class="header-left" href="/">
-            <img class="ddc-logo" src="/images/DDC_logo.png" alt="DDC_Logo">
+            <img class="ddc-logo" src="/images/DDC_logo.png" width="100" height="100" alt="DDC_Logo">
           </a>
 
           <button class="menu-button">
-            <img class="menu-icon" src="/images/menu-icon.svg" alt="">
+            <img class="menu-icon" src="/images/menu-icon.svg" width="30" height="30" alt="menu-icon">
           </button>
 
           <nav class="header-right">
             <button class="close-button">
-              <img class="close-icon" src="/images/close-icon.svg" alt="">
+              <img class="close-icon" src="/images/close-icon.svg" width="30" height="30" alt="close-icon">
             </button>
 
             <ul class="nav-links">

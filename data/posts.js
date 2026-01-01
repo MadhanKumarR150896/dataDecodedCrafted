@@ -1,5 +1,4 @@
-import { client, urlFor } from "./sanity";
-import dayjs from "dayjs";
+import { client } from "./sanity";
 
 class Post {
   id;
@@ -16,14 +15,6 @@ class Post {
     this.slug = postData.slug;
     this.tag = postData.tag;
     this.title = postData.title;
-  }
-
-  getUrl() {
-    return urlFor(this.image);
-  }
-
-  getDateString() {
-    return dayjs(this.publishedAt).format("MMMM DD, YYYY");
   }
 }
 
