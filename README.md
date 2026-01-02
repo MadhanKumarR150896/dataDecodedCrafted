@@ -16,18 +16,18 @@ A blog built for a client to share technical insights about **Databricks** and d
 
 ## Overview
 
-  ## HomePage
+  ### HomePage
   
-    - Has three sections --> Featured, New and Recent
-    - Featured Section --> The client can just make a post as featured with just a toggle in the sanity studio and it will render in the featured section
-    - New --> The last two posts published by the client will be displayed
-    - Recent --> A total of 8 posts excluding the new posts will be displayed 
-    - Search section --> **Work in Progress** - Will be able to look for posts with keywords
+  - Has three sections --> Featured, New and Recent
+  - Featured Section --> The client can just make a post as featured with just a toggle in the sanity studio and it will render in the featured section
+  - New --> The last two posts published by the client will be displayed
+  - Recent --> A total of 8 posts excluding the new posts will be displayed 
+  - Search section --> **Work in Progress** - Will be able to look for posts with keywords
 
-  ## PostPage -- **Work in Progress**
+  ### PostPage -- **Work in Progress**
   
-    - The client can write content, code snippets, upload images and videos through sanity studio
-    - Data will be fetched and html will be dynamically built
+  - The client can write content, code snippets, upload images and videos through sanity studio
+  - Data will be fetched and html will be dynamically built
 
 ## Challenges
 
