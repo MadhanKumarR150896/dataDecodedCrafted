@@ -38,8 +38,7 @@ function renderFeaturedPost(post) {
   return renderPostHtml(
     post,
     "f-brick-layout",
-    "(max-width: 767px) calc(100vw - 64px), (max-width: 1279px) 83vw, 60vw",
-    "high",
+    "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 85vw, 60vw",
     "eager"
   );
 }
@@ -48,9 +47,8 @@ function renderNewPost(post) {
   return renderPostHtml(
     post,
     "n-brick-layout",
-    "(max-width: 767px) calc(100vw - 64px), (max-width: 1279px) 38vw, 20vw",
-    "auto",
-    "lazy"
+    "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
+    "eager"
   );
 }
 
@@ -58,25 +56,23 @@ function renderRecentPost(post) {
   return renderPostHtml(
     post,
     "r-brick-layout",
-    "(max-width: 767px) calc(100vw - 64px), (max-width: 1279px) 38vw, 20vw",
-    "auto",
+    "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
     "lazy"
   );
 }
 
-function renderPostHtml(post, layout, sizes, fetchpriority, loading) {
+function renderPostHtml(post, layout, sizes, loading) {
   return `<article class="${layout}">
       <div class="brick-thumbnail">
-        <img src="${urlFor(post.image).width(800).height(400).url()}"
+        <img src="${urlFor(post.image).width(1200).height(600).url()}"
         srcset = "
-        ${urlFor(post.image).width(400).height(200).url()} 400w,
         ${urlFor(post.image).width(800).height(400).url()} 800w,
         ${urlFor(post.image).width(1200).height(600).url()} 1200w,
-        ${urlFor(post.image).width(1600).height(800).url()} 1600w"
+        ${urlFor(post.image).width(1600).height(800).url()} 1600w,
+        ${urlFor(post.image).width(2000).height(1000).url()} 1600w"
         sizes= "${sizes}" alt="${post.image.alt || "Main-Image"}"
-        fetchpriority="${fetchpriority}"
         loading="${loading}"
-        decoding="async">
+        >
         <div class="brick-tag">${post.tag}</div>
       </div>
       <div class="brick-details">
