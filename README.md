@@ -12,13 +12,7 @@ A blog built for a client to share technical insights about **Databricks** and d
 - **Headless Architecture:** Separates the frontend code from the content.
 - **Dynamic Content:** Fetches blog posts and content in real-time using Sanity's GROQ query.
 - **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
-- **Client-Friendly Editing:** Built a custom Sanity Studio so the client can write, edit and post updates without touching the code.
-
-## ScreenShots
-
-|                 Desktop View                  |               Tab View                |                 Mobile View                 |                          Mobile View with Menu and Overlay                          |
-| :-------------------------------------------: | :-----------------------------------: | :-----------------------------------------: | :---------------------------------------------------------------------------------: |
-| ![Desktop View](/src/assets/Desktop_View.png) | ![Tab View](/src/assets/Tab_View.png) | ![Mobile View](/src/assets/Mobile_View.png) | ![Mobile View with Menu and Overlay](/src/assets/Mobile_View_Menu_with_Overlay.png) |
+- **Client-Friendly Editing:** Built a Sanity Studio with custom schema so the client can write, edit and post updates without touching the code.
 
 ## Overview
 
@@ -29,6 +23,7 @@ A blog built for a client to share technical insights about **Databricks** and d
 - New --> The last two posts published by the client will be displayed
 - Recent --> A total of 8 posts excluding the new posts will be displayed
 - Search section --> **Work in Progress** - Will be able to look for posts with keywords
+- Mocked data for now to give an outlook for the site
 
 ### PostPage --> **Work in Progress**
 
@@ -49,3 +44,17 @@ A blog built for a client to share technical insights about **Databricks** and d
 
 - Youtuber: [@SuperSimpleDev](https://www.youtube.com/@SuperSimpleDev) --> **@SuperSimpleDev** - His videos and conceptual coaching has been my go to ever since i started this journey
 - Youtuber: [@TheCoderCoder](https://www.youtube.com/@TheCoderCoder) --> **@TheCoderCoder** - She taught me that it is not bad to make mistakes while learning and creating something
+
+## ScreenShots
+
+### Frontend - Responsive Design
+
+|                 Desktop View                  |               Tab View                |                 Mobile View                 |                          Mobile View with Menu and Overlay                          |
+| :-------------------------------------------: | :-----------------------------------: | :-----------------------------------------: | :---------------------------------------------------------------------------------: |
+| ![Desktop View](/src/assets/Desktop_View.png) | ![Tab View](/src/assets/Tab_View.png) | ![Mobile View](/src/assets/Mobile_View.png) | ![Mobile View with Menu and Overlay](/src/assets/Mobile_View_Menu_with_Overlay.png) |
+
+### Headless CMS - Sanity Studio
+
+|                   View 1                   |                   View 2                   |                   View 3                   |
+| :----------------------------------------: | :----------------------------------------: | :----------------------------------------: |
+| ![View 1](/src/assets/Sanity_Studio_1.png) | ![View 2](/src/assets/Sanity_Studio_2.png) | ![View 3](/src/assets/Sanity_Studio_3.png) |
