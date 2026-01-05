@@ -315,7 +315,22 @@
     font-size: var(--fs-16);
   }
 
+  .f-brick-layout .brick-title {
+    padding-block: 0.65rem;
+    line-height: 1.2;
+    height: calc(2.4em + 0.65rem);
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
   .brick-date {
     font-size: var(--fs-14);
+  }
+
+  .f-brick-layout .brick-date {
+    padding-block-start: 0.6rem;
   }
 }
