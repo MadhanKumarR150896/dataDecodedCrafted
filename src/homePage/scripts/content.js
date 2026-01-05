@@ -64,8 +64,12 @@ function renderRecentPost(post) {
 function renderPostHtml(post, layout, sizes, loading) {
   return `<article class="${layout}">
       <div class="brick-thumbnail">
-        <img src="${urlFor(post.image).width(1200).height(600).url()}"
+        <img
+        width="1200"
+        height="600"
+        src="${urlFor(post.image).width(1200).height(600).url()}"
         srcset = "
+        ${urlFor(post.image).width(400).height(200).url()} 400w,
         ${urlFor(post.image).width(800).height(400).url()} 800w,
         ${urlFor(post.image).width(1200).height(600).url()} 1200w,
         ${urlFor(post.image).width(1600).height(800).url()} 1600w,

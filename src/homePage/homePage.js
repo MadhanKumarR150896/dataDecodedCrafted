@@ -5,10 +5,22 @@ import { renderContentSection } from "./scripts/content.js";
 async function loadHomePage() {
   subtitleAnimation();
   try {
-    const response = await Promise.allSettled([
-      fetchFeaturedPost(),
-      fetchNewAndRecentPosts(),
-    ]);
+    let response;
+
+    const savedData = JSON.parse(localStorage.getItem("savedData"));
+    const expiry = Date.now() - JSON.parse(localStorage.getItem("savedTime"));
+
+    if (savedData && savedData.length > 0 && expiry < 300000) {
+      response = savedData;
+    } else {
+      response = await Promise.allSettled([
+        fetchFeaturedPost(),
+        fetchNewAndRecentPosts(),
+      ]);
+
+      localStorage.setItem("savedData", JSON.stringify(response));
+      localStorage.setItem("savedTime", JSON.stringify(Date.now()));
+    }
 
     let featuredPost =
       response[0].status === "fulfilled" && response[0].value !== null
