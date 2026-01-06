@@ -5,29 +5,39 @@ import { renderContentSection } from "./scripts/content.js";
 async function loadHomePage() {
   subtitleAnimation();
   try {
+    const savedData = JSON.parse(localStorage.getItem("savedData"));
+    const validData = Array.isArray(savedData) && savedData.length === 2;
+
+    const savedTime = JSON.parse(localStorage.getItem("savedTime"));
+    const validTime = savedTime && Date.now() - savedTime < 300000;
+
     let response;
 
-    const savedData = JSON.parse(localStorage.getItem("savedData"));
-    const expiry = Date.now() - JSON.parse(localStorage.getItem("savedTime"));
-
-    if (savedData && savedData.length > 0 && expiry < 300000) {
+    if (validData && validTime) {
       response = savedData;
     } else {
+      localStorage.removeItem("savedData");
+      localStorage.removeItem("savedTime");
+
       response = await Promise.allSettled([
         fetchFeaturedPost(),
         fetchNewAndRecentPosts(),
       ]);
 
-      localStorage.setItem("savedData", JSON.stringify(response));
-      localStorage.setItem("savedTime", JSON.stringify(Date.now()));
+      const isFulfilled = response.every((res) => res.status === "fulfilled");
+
+      if (isFulfilled) {
+        localStorage.setItem("savedData", JSON.stringify(response));
+        localStorage.setItem("savedTime", JSON.stringify(Date.now()));
+      }
     }
 
     let featuredPost =
-      response[0].status === "fulfilled" && response[0].value !== null
+      response[0]?.status === "fulfilled" && response[0].value !== null
         ? response[0].value
         : null;
     let latestPosts =
-      response[1].status === "fulfilled" && response[1].value !== null
+      response[1]?.status === "fulfilled" && response[1].value !== null
         ? response[1].value
         : [];
 

@@ -115,7 +115,7 @@
 
 .new-section-grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   grid-template-columns: 1fr;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .n-brick-layout {
-  width: min(calc(100vw - 78.7vw), calc(289/16 * 1rem));
+  width: min(calc(100vw - 79.2vw), calc(280/16 * 1rem));
 }
 
 .f-brick-layout,
@@ -153,7 +153,6 @@
   box-shadow: 0 0 5px var(--c-navy-900);
 }
 
-
 .brick-thumbnail {
   position: relative;
 }
@@ -166,10 +165,6 @@
   object-fit: cover;
   display: block;
 }
-
-.f-brick-layout img,
-.n-brick-layout img,
-.r-brick-layout img {}
 
 .brick-details {
   display: grid;
@@ -267,6 +262,7 @@
 
   .new-section-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .recent-section-grid {
