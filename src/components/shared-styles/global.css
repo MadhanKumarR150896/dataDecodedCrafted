@@ -170,6 +170,7 @@
   --fs-16: calc(16/16 * 1rem);
   --fs-14: calc(14/16 * 1rem);
   --fs-12: calc(12/16 * 1rem);
+  --fs-11: calc(11.5/16 * 1rem);
 }
 
 *,
@@ -189,6 +190,9 @@ img {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   color: var(--c-navy-900);
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   font-size: var(--fs-16);

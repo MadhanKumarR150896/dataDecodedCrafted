@@ -3,5 +3,5 @@
 @import '../components/shared-styles/global.css' layer(global);
 @import '../components/shared-styles/header.css' layer(header);
 @import '../components/shared-styles/overlay.css' layer(overlay);
-@import './styles/mainHome.css' layer(main);
+@import './styles/mainSearch.css' layer(main);
 @import '../components/shared-styles/footer.css' layer(footer);

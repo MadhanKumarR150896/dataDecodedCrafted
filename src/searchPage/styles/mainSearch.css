@@ -1,0 +1,140 @@
+.main {
+  flex: 1;
+  margin-block: 2.5rem;
+  grid-template-rows: auto 1fr;
+}
+
+.sr-section {
+  min-height: 30vh;
+  padding: 2rem;
+  background-color: var(--c-oat-light);
+  border-radius: 5px;
+  border: 1px solid var(--c-grayish-blue);
+}
+
+h2 {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  font-family: 'DM Mono', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: var(--fs-16);
+  margin-block-end: 0.75rem;
+  border-radius: 5px;
+  background-color: var(--c-grayish-blue);
+  color: var(--c-navy-900);
+  font-weight: 400;
+}
+
+.sr-section-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sr-brick-layout {
+  position: relative;
+  border: 2px solid var(--c-grayish-blue);
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: hsl(0 0% 97.6%);
+}
+
+.sr-brick-layout:hover {
+  box-shadow: 0 0 5px var(--c-navy-900);
+}
+
+.brick-thumbnail {
+  position: relative;
+}
+
+.brick-thumbnail>img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.brick-details {
+  display: grid;
+}
+
+.brick-title {
+  font-size: var(--fs-16);
+  padding-block: 0.65rem;
+  font-weight: 700;
+  line-height: 1.2;
+  height: calc(2.4em + 0.65rem);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.brick-link {
+  text-decoration: none;
+  color: var(--c-navy-900);
+}
+
+.brick-link:hover {
+  text-decoration: 2px underline;
+}
+
+.brick-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.brick-date {
+  font-size: var(--fs-14);
+  color: var(--c-dark-grayish-blue);
+  padding-block-start: 0.6rem;
+}
+
+.brick-tag {
+  font-size: var(--fs-14);
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--c-oat-medium);
+  color: var(--c-navy-900);
+  border-radius: 2px;
+  font-weight: 600;
+  bottom: 15px;
+  right: 10px;
+}
+
+
+@media (width < calc(1280/16 * 1rem)) {
+
+  .sr-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (width < calc(768/16 * 1rem)) {
+
+  .sr-section {
+    padding: 1rem;
+  }
+
+  .sr-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    padding: 0.2rem 0.75rem;
+    font-size: var(--fs-16);
+
+  }
+
+}

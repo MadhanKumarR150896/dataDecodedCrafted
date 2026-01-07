@@ -9,7 +9,8 @@ async function loadHomePage() {
     const validData = Array.isArray(savedData) && savedData.length === 2;
 
     const savedTime = JSON.parse(localStorage.getItem("savedTime"));
-    const validTime = savedTime && Date.now() - savedTime < 300000;
+    const validTime =
+      Number.isFinite(savedTime) && Date.now() - savedTime < 300000;
 
     let response;
 
@@ -46,6 +47,24 @@ async function loadHomePage() {
     console.log("Unexpected error: Please try again");
     console.log(error);
   }
+
+  document.querySelector(".js-search-button").addEventListener("click", () => {
+    const search = document.querySelector(".js-search-box").value;
+    if (search !== "") {
+      window.location.href = `search.html?search=${search}`;
+    }
+  });
+
+  document
+    .querySelector(".js-search-box")
+    .addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        const search = document.querySelector(".js-search-box").value;
+        if (search !== "") {
+          window.location.href = `search.html?search=${search}`;
+        }
+      }
+    });
 }
 
 loadHomePage();
