@@ -48,7 +48,7 @@ function renderNewPost(post) {
     post,
     "n-brick-layout",
     "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
-    "eager"
+    "lazy"
   );
 }
 
@@ -62,19 +62,20 @@ function renderRecentPost(post) {
 }
 
 function renderPostHtml(post, layout, sizes, loading) {
-  return `<article class="${layout}">
+  return `
+    <article class="${layout}">
       <div class="brick-thumbnail">
         <img
         width="1200"
         height="600"
         src="${urlFor(post.image).width(1200).height(600).url()}"
-        srcset = "
+        srcset="
         ${urlFor(post.image).width(400).height(200).url()} 400w,
         ${urlFor(post.image).width(800).height(400).url()} 800w,
         ${urlFor(post.image).width(1200).height(600).url()} 1200w,
         ${urlFor(post.image).width(1600).height(800).url()} 1600w,
         ${urlFor(post.image).width(2000).height(1000).url()} 2000w"
-        sizes= "${sizes}" alt="${post.image.alt || "Main-Image"}"
+        sizes="${sizes}" alt="${post.image.alt || "Main-Image"}"
         loading="${loading}"
         >
         <div class="brick-tag">${post.tag}</div>
