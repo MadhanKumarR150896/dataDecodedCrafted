@@ -1,6 +1,6 @@
-import { subtitleAnimation } from "./scripts/subtitleAnimation.js";
+import { subtitleAnimation } from "./subtitleAnimation.js";
 import { fetchFeaturedPost, fetchNewAndRecentPosts } from "../../data/posts.js";
-import { renderContentSection } from "./scripts/content.js";
+import { renderContentSection } from "./content.js";
 
 async function loadHomePage() {
   subtitleAnimation();
@@ -51,7 +51,7 @@ async function loadHomePage() {
   document.querySelector(".js-search-button").addEventListener("click", () => {
     const search = document.querySelector(".js-search-box").value;
     if (search !== "") {
-      window.location.href = `search.html?search=${search}`;
+      window.location.href = `search.html?q=${encodeURIComponent(search)}`;
     }
   });
 
@@ -61,7 +61,7 @@ async function loadHomePage() {
       if (event.key === "Enter") {
         const search = document.querySelector(".js-search-box").value;
         if (search !== "") {
-          window.location.href = `search.html?search=${search}`;
+          window.location.href = `search.html?q=${encodeURIComponent(search)}`;
         }
       }
     });

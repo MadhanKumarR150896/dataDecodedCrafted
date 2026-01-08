@@ -1,4 +1,4 @@
-import { urlFor } from "../../../data/sanity";
+import { urlFor } from "../../data/sanity";
 import dayjs from "dayjs";
 
 export function renderContentSection(allPosts) {

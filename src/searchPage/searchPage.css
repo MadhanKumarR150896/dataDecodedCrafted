@@ -1,7 +1,7 @@
 @layer global, header, overlay, main, footer;
 
-@import '../components/shared-styles/global.css' layer(global);
-@import '../components/shared-styles/header.css' layer(header);
-@import '../components/shared-styles/overlay.css' layer(overlay);
-@import './styles/mainSearch.css' layer(main);
-@import '../components/shared-styles/footer.css' layer(footer);
+@import '../components/global.css' layer(global);
+@import '../components/header.css' layer(header);
+@import '../components/overlay.css' layer(overlay);
+@import './mainSearch.css' layer(main);
+@import '../components/footer.css' layer(footer);

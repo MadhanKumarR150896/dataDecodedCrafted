@@ -6,7 +6,7 @@
 
 .hero-section {
   min-height: 20vh;
-  margin-block-end: 0.5rem;
+  margin-block: 0.25rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   line-height: 1.2;
+  min-height: 12vh;
 }
 
 .blog-title span:first-child {
@@ -261,6 +262,10 @@
     min-height: 18vh;
   }
 
+  .blog-title {
+    min-height: 10vh;
+  }
+
   .blog-title span:first-child {
     font-size: var(--fs-54);
   }
@@ -301,6 +306,12 @@
 }
 
 @media (width < calc(768/16 * 1rem)) {
+
+  .blog-title {
+    min-height: 8vh;
+  }
+
+
   .blog-title span:first-child {
     font-size: var(--fs-44);
   }

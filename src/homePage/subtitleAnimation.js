@@ -3,7 +3,7 @@ export function subtitleAnimation() {
 
   if (!subTitle) return;
 
-  const subTitleText = subTitle.textContent;
+  const subTitleText = "Decoded & Crafted";
 
   function repeatAnimation() {
     subTitle.textContent = "";
