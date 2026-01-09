@@ -28,7 +28,7 @@ class GlobalHeader extends HTMLElement {
 
             <ul class="nav-links">
               <li><a href="/">Home</a></li>
-              <li><a href="#recent-section">Explore</a></li>
+              <li><a href="/#recent-section">Explore</a></li>
               <li><a href="about.html">About</a></li>
             </ul>
           </nav>
@@ -76,10 +76,7 @@ class GlobalHeader extends HTMLElement {
         this.closeMenu();
         return;
       }
-      if (
-        event.target.closest(".nav-links a") &&
-        this.headerRight.classList.contains("visible")
-      ) {
+      if (event.target.closest(".nav-links a")) {
         const link = event.target.closest(".nav-links a").getAttribute("href");
 
         event.preventDefault();
@@ -88,7 +85,7 @@ class GlobalHeader extends HTMLElement {
 
         setTimeout(() => {
           window.location.href = link;
-        }, 800);
+        }, 1000);
       }
     });
 

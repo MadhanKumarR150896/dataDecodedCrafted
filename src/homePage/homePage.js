@@ -1,6 +1,7 @@
 import { subtitleAnimation } from "./subtitleAnimation.js";
 import { fetchFeaturedPost, fetchNewAndRecentPosts } from "../../data/posts.js";
 import { renderContentSection } from "./content.js";
+import { renderSearchBoxResults } from "./search.js";
 
 async function loadHomePage() {
   subtitleAnimation();
@@ -64,6 +65,13 @@ async function loadHomePage() {
           window.location.href = `search.html?q=${encodeURIComponent(search)}`;
         }
       }
+    });
+
+  document
+    .querySelector(".js-search-box")
+    .addEventListener("input", (event) => {
+      const searchTerm = event.target.value;
+      renderSearchBoxResults(searchTerm);
     });
 }
 

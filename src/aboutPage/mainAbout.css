@@ -1,0 +1,27 @@
+.main {
+  flex: 1;
+}
+
+.main * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-44);
+  font-family: "DM Mono", Arial, Helvetica, sans-serif;
+}
+
+@media(width < calc(1280/16 * 1rem)) {
+
+  .main * {
+    font-size: var(--fs-34);
+  }
+
+}
+
+@media(width < calc(768/16 * 1rem)) {
+
+  .main * {
+    font-size: var(--fs-24);
+  }
+
+}

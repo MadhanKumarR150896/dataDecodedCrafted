@@ -1,13 +1,19 @@
 import { urlFor } from "../../data/sanity";
 import dayjs from "dayjs";
 
-export function renderSearchResults(params) {
-  const { search, searchPosts } = params;
+export function renderSearchMessage(searchTerm) {
+  document.querySelector(
+    ".js-sr-section-title"
+  ).textContent = `Showing results for "${searchTerm}"`;
+}
 
-  if (searchPosts && searchPosts.length > 0) {
+export function renderSearchResults(searchPosts) {
+  if (searchPosts && searchPosts.length === 0) {
     document.querySelector(
-      ".js-sr-section-title"
-    ).textContent = `Search results for: "${search}"`;
+      ".js-sr-section-grid"
+    ).innerHTML = `<p>No results found</p>`;
+  }
+  if (searchPosts && searchPosts.length > 0) {
     document.querySelector(".js-sr-section-grid").innerHTML = searchPosts
       .map((searchPost) => renderPostHtml(searchPost))
       .join("");
