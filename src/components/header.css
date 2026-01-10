@@ -57,15 +57,19 @@
 }
 
 @media (width < calc(768/16 * 1rem)) {
+  .header {
+    height: calc(80/16 * 1rem);
+  }
 
   .ddc-logo {
-    width: calc(96/16 * 1rem);
+    width: calc(80/16 * 1rem);
     height: auto;
-    padding-block: 0.6rem;
+    padding-block: 0.5rem;
   }
 
   .menu-button {
     display: flex;
+    width: 1.5rem;
     margin-block-start: 5px;
     margin-inline-end: 18px;
   }
@@ -86,6 +90,7 @@
 
   .close-button {
     display: flex;
+    width: 1.5rem;
     margin-inline-start: 2.1rem;
     margin-block: 2.1rem;
   }

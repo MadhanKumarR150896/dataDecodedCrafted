@@ -27,6 +27,10 @@
 }
 
 @media (width < calc(768/16 * 1rem)) {
+  .footer {
+    height: calc(80/16 * 1rem);
+  }
+
   .footer-content p {
     font-size: var(--fs-11);
   }

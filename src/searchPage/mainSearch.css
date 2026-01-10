@@ -42,6 +42,7 @@ h2 {
   padding: 0.5rem;
   border-radius: 5px;
   background-color: hsl(0 0% 97.6%);
+  transition: box-shadow 150ms ease-in-out;
 }
 
 .sr-brick-layout:hover {
