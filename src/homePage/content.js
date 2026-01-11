@@ -4,22 +4,30 @@ import dayjs from "dayjs";
 export function renderContentSection(allPosts) {
   const { featuredPost, latestPosts } = allPosts;
 
+  const featuredGrid = document.querySelector(".js-featured-section-grid");
+  const newGrid = document.querySelector(".js-new-section-grid");
+  const recentGrid = document.querySelector(".js-recent-section-grid");
+
   //featured post
   if (featuredPost && featuredPost !== null) {
-    document.querySelector(".js-featured-section-grid").innerHTML =
-      renderFeaturedPost(featuredPost);
+    featuredGrid.classList.remove("is-loading");
+
+    featuredGrid.innerHTML = renderFeaturedPost(featuredPost);
   } else if (latestPosts && latestPosts.length > 0) {
     const altPost = latestPosts[0];
 
-    document.querySelector(".js-featured-section-grid").innerHTML =
-      renderFeaturedPost(altPost);
+    featuredGrid.classList.remove("is-loading");
+
+    featuredGrid.innerHTML = renderFeaturedPost(altPost);
   }
 
   //new posts
   if (latestPosts && latestPosts.length > 0) {
     const newPosts = latestPosts.slice(0, 2);
 
-    document.querySelector(".js-new-section-grid").innerHTML = newPosts
+    newGrid.classList.remove("is-loading");
+
+    newGrid.innerHTML = newPosts
       .map((newPost) => renderNewPost(newPost))
       .join("");
   }
@@ -28,7 +36,9 @@ export function renderContentSection(allPosts) {
   if (latestPosts && latestPosts.length >= 3) {
     const recentPosts = latestPosts.slice(2);
 
-    document.querySelector(".js-recent-section-grid").innerHTML = recentPosts
+    recentGrid.classList.remove("is-loading");
+
+    recentGrid.innerHTML = recentPosts
       .map((recentPost) => renderRecentPost(recentPost))
       .join("");
   }

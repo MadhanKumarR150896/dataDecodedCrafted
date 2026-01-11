@@ -8,13 +8,16 @@ export function renderSearchMessage(searchTerm) {
 }
 
 export function renderSearchResults(searchPosts) {
+  const srGrid = document.querySelector(".js-sr-section-grid");
+
   if (searchPosts && searchPosts.length === 0) {
-    document.querySelector(
-      ".js-sr-section-grid"
-    ).innerHTML = `<p>No results found</p>`;
+    srGrid.classList.remove("is-loading");
+    srGrid.innerHTML = `<p>No results found</p>`;
   }
+
   if (searchPosts && searchPosts.length > 0) {
-    document.querySelector(".js-sr-section-grid").innerHTML = searchPosts
+    srGrid.classList.remove("is-loading");
+    srGrid.innerHTML = searchPosts
       .map((searchPost) => renderPostHtml(searchPost))
       .join("");
   }

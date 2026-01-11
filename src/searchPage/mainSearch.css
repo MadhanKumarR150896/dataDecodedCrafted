@@ -49,6 +49,33 @@ h2 {
   box-shadow: 0 0 5px var(--c-navy-900);
 }
 
+div[class~="is-loading"] div {
+  border-radius: 5px;
+  animation: is-loading 1500ms infinite;
+}
+
+@keyframes is-loading {
+  0% {
+    background-color: var(--c-oat-medium);
+  }
+
+  50% {
+    background-color: var(--c-oat-light);
+  }
+
+  100% {
+    background-color: var(--c-oat-medium);
+  }
+}
+
+div[class~="is-loading"] img,
+div[class~="is-loading"] .brick-tag,
+div[class~="is-loading"] h3,
+div[class~="is-loading"] p {
+  opacity: 0;
+}
+
+
 .brick-thumbnail {
   position: relative;
 }
