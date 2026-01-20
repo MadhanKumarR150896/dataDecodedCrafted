@@ -52,7 +52,7 @@ async function loadHomePage() {
   document.querySelector(".js-search-button").addEventListener("click", () => {
     const search = document.querySelector(".js-search-box").value;
     if (search !== "") {
-      window.location.href = `search.html?q=${encodeURIComponent(search)}`;
+      window.location.href = `/search?q=${encodeURIComponent(search)}`;
     }
   });
 
@@ -62,7 +62,7 @@ async function loadHomePage() {
       if (event.key === "Enter") {
         const search = document.querySelector(".js-search-box").value;
         if (search !== "") {
-          window.location.href = `search.html?q=${encodeURIComponent(search)}`;
+          window.location.href = `/search?q=${encodeURIComponent(search)}`;
         }
       }
     });

@@ -22,18 +22,16 @@ A blog built for a client to share technical insights about **Databricks** and d
 - Featured Section --> The client can just make a post as featured with just a toggle in the sanity studio and it will render in the featured section
 - New --> The last two posts published by the client will be displayed
 - Recent --> A total of 8 posts excluding the new posts will be displayed
-- Search section --> **Work in Progress** - Will be able to look for posts with keywords
 - Mocked data for now to give an outlook for the site
+
+#### Search Section
+
+- Will fetch upto 4 posts based on user input with a debouncer effect in a dropdown.
 
 ### PostPage --> **Work in Progress**
 
 - The client can write content, code snippets, upload images and videos through sanity studio
 - Data will be fetched and html will be dynamically built
-
-## Challenges
-
-- Starting a project with no design file or just with a plain idea of building a blog since building this for a client who is a close knit was the biggest challenge as i am in a phase of restructuring my career from had been a production support engineer with 6+ yoe into becoming a front end developer
-- I wanted to build without any frameworks as a first version of this project to challenge myself
 
 ## Author
 
@@ -42,7 +40,7 @@ A blog built for a client to share technical insights about **Databricks** and d
 
 ## Acknowledgments
 
-- Youtuber: [@SuperSimpleDev](https://www.youtube.com/@SuperSimpleDev) --> **@SuperSimpleDev** - His videos and conceptual coaching has been my go to ever since i started this journey
+- Youtuber: [@SuperSimpleDev](https://www.youtube.com/@SuperSimpleDev) --> **@SuperSimpleDev** - His videos and conceptual coaching has been my go to ever since i started with frontend
 - Youtuber: [@TheCoderCoder](https://www.youtube.com/@TheCoderCoder) --> **@TheCoderCoder** - She taught me that it is not bad to make mistakes while learning and creating something
 
 ## ScreenShots
