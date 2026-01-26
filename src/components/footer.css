@@ -1,7 +1,11 @@
+global-footer {
+  margin-top: auto;
+}
+
 .footer {
-  height: calc(96/16 * 1rem);
+  height: calc(96 / 16 * 1rem);
   background-color: var(--c-oat-light);
-  border-top: 1px solid var(--c-grayish-blue);
+  border-block-start: 1px solid var(--c-grayish-blue);
 }
 
 .footer-content {
@@ -19,16 +23,15 @@
   height: auto;
 }
 
-@media (width < calc(1280/16 * 1rem)) {
+@media (width < calc(1024 / 16 * 1rem)) {
   .footer-content p {
     font-size: var(--fs-14);
   }
-
 }
 
-@media (width < calc(768/16 * 1rem)) {
+@media (width < calc(768 / 16 * 1rem)) {
   .footer {
-    height: calc(80/16 * 1rem);
+    height: calc(80 / 16 * 1rem);
   }
 
   .footer-content p {

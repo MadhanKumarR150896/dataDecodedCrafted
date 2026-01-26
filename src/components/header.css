@@ -1,5 +1,5 @@
 .header {
-  height: calc(96/16 * 1rem);
+  height: calc(96 / 16 * 1rem);
   background-color: var(--c-oat-light);
   border-bottom: 1px solid var(--c-grayish-blue);
 }
@@ -15,7 +15,7 @@
 }
 
 .ddc-logo {
-  width: calc(112/16 * 1rem);
+  width: calc(112 / 16 * 1rem);
   height: auto;
   padding-block: 0.2rem;
 }
@@ -43,7 +43,7 @@
   list-style: none;
 }
 
-.nav-links>li>a {
+.nav-links > li > a {
   display: flex;
   text-decoration: none;
   font-weight: 500;
@@ -52,17 +52,24 @@
   transition: background-color 150ms ease-in-out;
 }
 
-.nav-links>li>a:hover {
+.nav-links > li > a:hover {
   background-color: var(--c-oat-medium);
+}
+
+@media (width < calc(1024/16 * 1rem)) {
+  .nav-links > li > a:hover,
+  .ddc-logo:hover {
+    background-color: unset;
+  }
 }
 
 @media (width < calc(768/16 * 1rem)) {
   .header {
-    height: calc(80/16 * 1rem);
+    height: calc(80 / 16 * 1rem);
   }
 
   .ddc-logo {
-    width: calc(80/16 * 1rem);
+    width: calc(80 / 16 * 1rem);
     height: auto;
     padding-block: 0.5rem;
   }
@@ -95,16 +102,11 @@
     margin-block: 2.1rem;
   }
 
-  .menu-button:focus-visible,
-  .close-button:focus-visible {
-    outline: 1px solid var(--c-navy-900)
-  }
-
   .nav-links {
     flex-direction: column;
   }
 
-  .nav-links>li>a {
+  .nav-links > li > a {
     padding-inline: 2.5rem;
     padding-block: 1.5rem;
   }
