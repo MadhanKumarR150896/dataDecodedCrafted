@@ -62,3 +62,11 @@ export async function fetchSearchResults(searchTerm) {
     return new PreviewPost(postData);
   });
 }
+
+export async function fetchPost(postSlug) {
+  const query = `*[_type == 'post' && slug.current match $param][0]`;
+
+  const data = await client.fetch(query, { param: `${postSlug}*` });
+
+  return data;
+}

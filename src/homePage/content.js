@@ -49,7 +49,7 @@ function renderFeaturedPost(post) {
     post,
     "f-brick-layout",
     "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 85vw, 60vw",
-    "eager"
+    "eager",
   );
 }
 
@@ -58,7 +58,7 @@ function renderNewPost(post) {
     post,
     "n-brick-layout",
     "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
-    "lazy"
+    "lazy",
   );
 }
 
@@ -67,7 +67,7 @@ function renderRecentPost(post) {
     post,
     "r-brick-layout",
     "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
-    "lazy"
+    "lazy",
   );
 }
 
@@ -92,10 +92,10 @@ function renderPostHtml(post, layout, sizes, loading) {
       </div>
       <div class="brick-details">
         <h3 class="brick-title">
-          <a href="" class="brick-link">${post.title}</a>
+          <a href="/post?p=${post.slug}" class="brick-link">${post.title}</a>
         </h3>
         <p class="brick-date">${dayjs(post.publishedAt).format(
-          "MMMM DD, YYYY"
+          "MMMM DD, YYYY",
         )}</p>
       </div> 
     </article>

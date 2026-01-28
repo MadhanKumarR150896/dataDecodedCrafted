@@ -1,0 +1,7 @@
+@layer global, header, overlay, main, footer;
+
+@import "../components/global.css" layer(global);
+@import "../components/header.css" layer(header);
+@import "../components/overlay.css" layer(overlay);
+@import "./mainPost.css" layer(main);
+@import "../components/footer.css" layer(footer);

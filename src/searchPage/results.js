@@ -2,9 +2,8 @@ import { urlFor } from "../../data/sanity";
 import dayjs from "dayjs";
 
 export function renderSearchMessage(searchTerm) {
-  document.querySelector(
-    ".js-sr-section-title"
-  ).textContent = `Showing results for "${searchTerm}"`;
+  document.querySelector(".js-sr-section-title").textContent =
+    `Showing results for "${searchTerm}"`;
 }
 
 export function renderSearchResults(searchPosts) {
@@ -44,10 +43,10 @@ function renderPostHtml(post) {
       </div>
       <div class="brick-details">
         <h3 class="brick-title">
-          <a href="" class="brick-link">${post.title}</a>
+          <a href="/post?p=${post.slug}" class="brick-link">${post.title}</a>
         </h3>
         <p class="brick-date">${dayjs(post.publishedAt).format(
-          "MMMM DD, YYYY"
+          "MMMM DD, YYYY",
         )}</p>
       </div> 
     </article>

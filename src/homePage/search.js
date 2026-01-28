@@ -26,7 +26,10 @@ export async function renderSearchBoxResults(searchTerm) {
       dropDown.classList.add("searched");
 
       dropDown.innerHTML = srPosts
-        .map((srPost) => `<li><a href="">${srPost.title}</a></li>`)
+        .map(
+          (srPost) =>
+            `<li><a href="/post?p=${srPost.slug}">${srPost.title}</a></li>`,
+        )
         .join("");
     } else {
       dropDown.classList.remove("searched");

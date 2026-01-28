@@ -15,6 +15,7 @@
     "vite": "^7.3.0"
   },
   "dependencies": {
+    "@portabletext/to-html": "^5.0.1",
     "@sanity/client": "^7.13.2",
     "@sanity/image-url": "^2.0.2",
     "dayjs": "^1.11.19"
