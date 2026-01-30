@@ -25,7 +25,20 @@ class PreviewPost extends Post {
   }
 }
 
-const queryProjection = `{"id":_id,publishedAt,"slug": slug.current,title,"tag": postTag->tag,image,keywords}`;
+class IndividualPost extends PreviewPost {
+  author;
+  summary;
+  content;
+
+  constructor(postData) {
+    super(postData);
+    this.author = postData.author;
+    this.summary = postData.summary;
+    this.content = postData.content;
+  }
+}
+
+const queryProjection = `{"id":_id,publishedAt,"slug": slug.current,title,"tag": postTag->tag,image}`;
 
 export async function fetchNewAndRecentPosts() {
   const query = `*[_type == 'post'] | order(publishedAt desc)[0...10]${queryProjection}`;
@@ -64,9 +77,8 @@ export async function fetchSearchResults(searchTerm) {
 }
 
 export async function fetchPost(postSlug) {
-  const query = `*[_type == 'post' && slug.current match $param][0]`;
+  const query = `*[_type == 'post' && slug.current match $param][0]{"id":_id,publishedAt,"slug":slug.current,title,"tag":postTag->tag,image,author,summary,content}`;
 
-  const data = await client.fetch(query, { param: `${postSlug}*` });
-
-  return data;
+  const postData = await client.fetch(query, { param: `${postSlug}*` });
+  return new IndividualPost(postData);
 }

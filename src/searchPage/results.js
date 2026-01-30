@@ -36,7 +36,7 @@ function renderPostHtml(post) {
         ${urlFor(post.image).width(1200).height(600).url()} 1200w,
         ${urlFor(post.image).width(1600).height(800).url()} 1600w,
         ${urlFor(post.image).width(2000).height(1000).url()} 2000w"
-        sizes="(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw" 
+        sizes="(max-width: 767px) calc(100vw - 66px), (max-width: 1023px) 40vw, 20vw" 
         alt="${post.image.alt || "Main-Image"}"
         >
         <div class="brick-tag">${post.tag}</div>

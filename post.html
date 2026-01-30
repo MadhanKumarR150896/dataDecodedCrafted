@@ -6,7 +6,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, notranslate" />
 
-    <title>DDC: Search results</title>
+    <title>DDC: Post</title>
     <link rel="icon" href="/images/DDC_logo.png" type="image/png" />
 
     <link rel="stylesheet" href="/src/postPage/postPage.css" />
@@ -19,7 +19,21 @@
   <body>
     <global-header></global-header>
 
-    <main class="main wrapper"></main>
+    <main class="main wrapper">
+      <section class="hero-section js-hero-section">
+        <div class="post-main">
+          <img class="post-image" width="1200" height="600" src="" />
+          <h1 class="post-title"></h1>
+        </div>
+        <div class="post-details">
+          <p class="post-date"></p>
+          <p class="post-tag"></p>
+          <p class="post-author"></p>
+        </div>
+      </section>
+      <section class="summary-section js-summary-section"></section>
+      <section class="content-section js-content-section"></section>
+    </main>
 
     <global-footer></global-footer>
   </body>

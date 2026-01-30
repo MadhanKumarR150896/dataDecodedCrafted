@@ -18,6 +18,8 @@
     "@portabletext/to-html": "^5.0.1",
     "@sanity/client": "^7.13.2",
     "@sanity/image-url": "^2.0.2",
-    "dayjs": "^1.11.19"
+    "dayjs": "^1.11.19",
+    "htm": "^3.1.1",
+    "vhtml": "^2.2.0"
   }
 }

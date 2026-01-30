@@ -1,84 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="notranslate" />
+    <meta
+      name="description"
+      content="dataDecoded&Crafted: A blog where you can find contents related to databricks"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="notranslate">
-  <meta name="description" content="dataDecoded&Crafted: A blog where you can find contents related to databricks">
+    <meta property="og:title" content="dataDecoded&Crafted" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-  <meta property="og:title" content="dataDecoded&Crafted">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <title>dataDecoded&Crafted</title>
+    <link rel="icon" href="/images/DDC_logo.png" type="image/png" />
 
-  <title>dataDecoded&Crafted</title>
-  <link rel="icon" href="/images/DDC_logo.png" type="image/png">
+    <link rel="stylesheet" href="/src/homePage/homePage.css" />
 
-  <link rel="stylesheet" href="/src/homePage/homePage.css">
+    <script type="module" src="/src/components/header.js"></script>
+    <script type="module" src="/src/components/footer.js"></script>
+    <script type="module" src="/src/homePage/homePage.js"></script>
+  </head>
 
-  <script type="module" src="/src/components/header.js"></script>
-  <script type="module" src="/src/components/footer.js"></script>
-  <script type="module" src="/src/homePage/homePage.js"></script>
+  <body>
+    <global-header></global-header>
 
-</head>
-
-<body>
-
-  <global-header></global-header>
-
-  <main class="main wrapper">
-
-    <section class="hero-section">
-
-      <h1 class="blog-title"><span>data</span><span class="sub-title"></span></h1>
-      <div class="search-section">
-        <div class="search-box-section">
-          <input class="search-box js-search-box" type="text" name="Search" id="search"
-            placeholder="Search your favorite databrick ..." autocomplete="off">
-          <ul class="sr-drop">
-
-          </ul>
-        </div>
-        <button class="search-button js-search-button" type="submit">Search</button>
-      </div>
-
-
-    </section>
-
-    <div class="main-content">
-
-      <section class="featured-section">
-
-        <h2 class="featured-section-title">Featured</h2>
-
-        <div class="featured-section-grid js-featured-section-grid is-loading">
-
-          <article class="f-brick-layout">
-            <div class="brick-thumbnail">
-              <img src="">
-              <div class="brick-tag"></div>
-            </div>
-            <div class="brick-details">
-              <h3 class="brick-title">
-                <a href="" class="brick-link"></a>
-              </h3>
-              <p class="brick-date"></p>
-            </div>
-          </article>
-
+    <main class="main wrapper">
+      <section class="hero-section">
+        <h1 class="blog-title">
+          <span>data</span><span class="sub-title"></span>
+        </h1>
+        <div class="search-section">
+          <div class="search-box-section">
+            <input
+              class="search-box js-search-box"
+              type="text"
+              name="Search"
+              id="search"
+              placeholder="Search your favorite databrick ..."
+              autocomplete="off"
+            />
+            <ul class="sr-drop"></ul>
+          </div>
+          <button class="search-button js-search-button" type="submit">
+            Search
+          </button>
         </div>
       </section>
 
-      <section class="new-section">
+      <div class="main-content">
+        <section class="featured-section">
+          <h2 class="featured-section-title">Featured</h2>
 
-        <h2 class="new-section-title">New</h2>
+          <div
+            class="featured-section-grid js-featured-section-grid is-loading"
+          >
+            <article class="f-brick-layout">
+              <div class="brick-thumbnail">
+                <img width="1200" height="600" src="" />
+                <div class="brick-tag"></div>
+              </div>
+              <div class="brick-details">
+                <h3 class="brick-title">
+                  <a href="" class="brick-link"></a>
+                </h3>
+                <p class="brick-date"></p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <div class="new-section-grid js-new-section-grid is-loading">
+        <section class="new-section">
+          <h2 class="new-section-title">New</h2>
+
+          <div class="new-section-grid js-new-section-grid is-loading">
+            <article class="n-brick-layout">
+              <div class="brick-thumbnail">
+                <img width="1200" height="600" src="" />
+                <div class="brick-tag"></div>
+              </div>
+              <div class="brick-details">
+                <h3 class="brick-title">
+                  <a href="" class="brick-link"></a>
+                </h3>
+                <p class="brick-date"></p>
+              </div>
+            </article>
+
+            <article class="n-brick-layout">
+              <div class="brick-thumbnail">
+                <img width="1200" height="600" src="" />
+                <div class="brick-tag"></div>
+              </div>
+              <div class="brick-details">
+                <h3 class="brick-title">
+                  <a href="" class="brick-link"></a>
+                </h3>
+                <p class="brick-date"></p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section id="recent-section" class="recent-section">
+        <h2 class="recent-section-title">Recent posts</h2>
+
+        <div class="recent-section-grid js-recent-section-grid is-loading">
           <article class="n-brick-layout">
             <div class="brick-thumbnail">
-              <img src="">
+              <img width="1200" height="600" src="" />
               <div class="brick-tag"></div>
             </div>
             <div class="brick-details">
@@ -91,7 +125,33 @@
 
           <article class="n-brick-layout">
             <div class="brick-thumbnail">
-              <img src="">
+              <img width="1200" height="600" src="" />
+              <div class="brick-tag"></div>
+            </div>
+            <div class="brick-details">
+              <h3 class="brick-title">
+                <a href="" class="brick-link"></a>
+              </h3>
+              <p class="brick-date"></p>
+            </div>
+          </article>
+
+          <article class="n-brick-layout">
+            <div class="brick-thumbnail">
+              <img width="1200" height="600" src="" />
+              <div class="brick-tag"></div>
+            </div>
+            <div class="brick-details">
+              <h3 class="brick-title">
+                <a href="" class="brick-link"></a>
+              </h3>
+              <p class="brick-date"></p>
+            </div>
+          </article>
+
+          <article class="n-brick-layout">
+            <div class="brick-thumbnail">
+              <img width="1200" height="600" src="" />
               <div class="brick-tag"></div>
             </div>
             <div class="brick-details">
@@ -103,74 +163,8 @@
           </article>
         </div>
       </section>
+    </main>
 
-    </div>
-
-
-    <section id="recent-section" class="recent-section">
-
-      <h2 class="recent-section-title">Recent posts</h2>
-
-      <div class="recent-section-grid js-recent-section-grid is-loading">
-        <article class="n-brick-layout">
-          <div class="brick-thumbnail">
-            <img src="">
-            <div class="brick-tag"></div>
-          </div>
-          <div class="brick-details">
-            <h3 class="brick-title">
-              <a href="" class="brick-link"></a>
-            </h3>
-            <p class="brick-date"></p>
-          </div>
-        </article>
-
-        <article class="n-brick-layout">
-          <div class="brick-thumbnail">
-            <img src="">
-            <div class="brick-tag"></div>
-          </div>
-          <div class="brick-details">
-            <h3 class="brick-title">
-              <a href="" class="brick-link"></a>
-            </h3>
-            <p class="brick-date"></p>
-          </div>
-        </article>
-
-        <article class="n-brick-layout">
-          <div class="brick-thumbnail">
-            <img src="">
-            <div class="brick-tag"></div>
-          </div>
-          <div class="brick-details">
-            <h3 class="brick-title">
-              <a href="" class="brick-link"></a>
-            </h3>
-            <p class="brick-date"></p>
-          </div>
-        </article>
-
-        <article class="n-brick-layout">
-          <div class="brick-thumbnail">
-            <img src="">
-            <div class="brick-tag"></div>
-          </div>
-          <div class="brick-details">
-            <h3 class="brick-title">
-              <a href="" class="brick-link"></a>
-            </h3>
-            <p class="brick-date"></p>
-          </div>
-        </article>
-      </div>
-
-    </section>
-
-  </main>
-
-  <global-footer></global-footer>
-
-</body>
-
+    <global-footer></global-footer>
+  </body>
 </html>

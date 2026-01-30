@@ -1,10 +1,9 @@
 .main {
-  display: grid;
   row-gap: 1rem;
 }
 
 .hero-section {
-  min-height: 20vh;
+  min-height: 10rem;
   margin-block: 0.25rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -13,10 +12,10 @@
 }
 
 .blog-title {
+  min-height: 5rem;
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  min-height: 12vh;
 }
 
 .blog-title span:first-child {
@@ -181,7 +180,7 @@ div[class~="is-loading"] p {
 
 .new-section-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: clamp(1.5rem, 10vw - 5rem, 3.5rem);
   grid-template-columns: 1fr;
 }
 
@@ -200,7 +199,7 @@ div[class~="is-loading"] p {
 }
 
 .n-brick-layout {
-  width: min(calc(100vw - 79.2vw), calc(280 / 16 * 1rem));
+  width: clamp(calc(204 / 16 * 1rem), 25vw - 3rem, calc(280 / 16 * 1rem));
 }
 
 .f-brick-layout,
@@ -268,15 +267,15 @@ div[class~="is-loading"] p {
 }
 
 .brick-date {
-  font-size: var(--fs-16);
   color: var(--c-dark-grayish-blue);
 }
 
 .n-brick-layout .brick-title,
 .r-brick-layout .brick-title {
   font-size: var(--fs-16);
+  padding-block: 0.25rem;
   line-height: 1.2;
-  height: calc(2.4em + 0.65rem);
+  height: calc(2.4em + 0.25rem);
   white-space: normal;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -287,7 +286,7 @@ div[class~="is-loading"] p {
 .n-brick-layout .brick-date,
 .r-brick-layout .brick-date {
   font-size: var(--fs-14);
-  padding-block-start: 0.6rem;
+  padding-block-start: 0.5rem;
 }
 
 .f-brick-layout .brick-tag {
@@ -315,14 +314,6 @@ div[class~="is-loading"] p {
 }
 
 @media (width < calc(1024/16 * 1rem)) {
-  .hero-section {
-    min-height: 18vh;
-  }
-
-  .blog-title {
-    min-height: 10vh;
-  }
-
   .blog-title span:first-child {
     font-size: var(--fs-54);
   }
@@ -339,9 +330,9 @@ div[class~="is-loading"] p {
     box-shadow: unset;
   }
 
-  .search-button {
-    background-color: var(--c-navy-900);
-    color: var(--c-oat-light);
+  .search-button:hover {
+    background-color: unset;
+    color: unset;
   }
 
   .main-content {
@@ -375,10 +366,6 @@ div[class~="is-loading"] p {
 }
 
 @media (width < calc(768/16 * 1rem)) {
-  .blog-title {
-    min-height: 8vh;
-  }
-
   .blog-title span:first-child {
     font-size: var(--fs-44);
   }
@@ -427,9 +414,9 @@ div[class~="is-loading"] p {
 
   .f-brick-layout .brick-title {
     font-size: var(--fs-16);
-    padding-block: 0.65rem;
+    padding-block: 0.25rem;
     line-height: 1.2;
-    height: calc(2.4em + 0.65rem);
+    height: calc(2.4em + 0.25rem);
     white-space: normal;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -439,7 +426,7 @@ div[class~="is-loading"] p {
 
   .f-brick-layout .brick-date {
     font-size: var(--fs-14);
-    padding-block-start: 0.6rem;
+    padding-block-start: 0.5rem;
   }
 
   .f-brick-layout .brick-tag {

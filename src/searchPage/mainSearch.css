@@ -3,7 +3,6 @@
 }
 
 .sr-section {
-  min-height: 30vh;
   padding: 2rem;
   background-color: var(--c-oat-light);
   border-radius: 5px;
@@ -92,10 +91,10 @@ div[class~="is-loading"] p {
 
 .brick-title {
   font-size: var(--fs-16);
-  padding-block: 0.65rem;
+  padding-block: 0.25rem;
   font-weight: 700;
   line-height: 1.2;
-  height: calc(2.4em + 0.65rem);
+  height: calc(2.4em + 0.25rem);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -126,7 +125,7 @@ div[class~="is-loading"] p {
 .brick-date {
   font-size: var(--fs-14);
   color: var(--c-dark-grayish-blue);
-  padding-block-start: 0.6rem;
+  padding-block-start: 0.5rem;
 }
 
 .brick-tag {

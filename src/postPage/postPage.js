@@ -11,7 +11,7 @@ async function loadPostPage() {
     const individualPost =
       response[0]?.status === "fulfilled" && response[0]?.value !== null
         ? response[0].value
-        : [];
+        : null;
 
     renderIndividualPost(individualPost);
   } catch (error) {

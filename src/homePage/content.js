@@ -48,7 +48,7 @@ function renderFeaturedPost(post) {
   return renderPostHtml(
     post,
     "f-brick-layout",
-    "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 85vw, 60vw",
+    "(max-width: 767px) calc(100vw - 66px), (max-width: 1023px) 85vw, 60vw",
     "eager",
   );
 }
@@ -57,7 +57,7 @@ function renderNewPost(post) {
   return renderPostHtml(
     post,
     "n-brick-layout",
-    "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
+    "(max-width: 767px) calc(100vw - 66px), (max-width: 1023px) 40vw, 20vw",
     "lazy",
   );
 }
@@ -66,7 +66,7 @@ function renderRecentPost(post) {
   return renderPostHtml(
     post,
     "r-brick-layout",
-    "(max-width: 767px) calc(100vw - 66px), (max-width: 1279px) 40vw, 20vw",
+    "(max-width: 767px) calc(100vw - 66px), (max-width: 1023px) 40vw, 20vw",
     "lazy",
   );
 }

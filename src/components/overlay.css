@@ -16,7 +16,7 @@
   left: 0;
 }
 
-@media (width>=calc(768/16 * 1rem)) {
+@media (width >= calc(768/16 * 1rem)) {
   .overlay {
     display: none;
   }
