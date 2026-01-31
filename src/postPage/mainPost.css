@@ -1,9 +1,23 @@
 .main {
   margin-block: 2.5rem;
+  row-gap: 2rem;
 }
 
 .hero-section {
   background-color: var(--c-oat-light);
+}
+
+.summary-section {
+  background-color: var(--c-oat-medium);
+  padding: 2rem;
+  margin-inline: auto;
+  width: 75%;
+}
+
+.summary-section[class~="is-loading"] {
+  background-color: var(--c-oat-light);
+  padding: 0;
+  width: 100%;
 }
 
 section[class~="is-loading"] * {
@@ -29,7 +43,8 @@ section[class~="is-loading"] * {
 
 section[class~="is-loading"] img,
 section[class~="is-loading"] h1,
-section[class~="is-loading"] p {
+section[class~="is-loading"] p,
+section[class~="is-loading"] li {
   opacity: 0;
 }
 
@@ -53,6 +68,7 @@ section[class~="is-loading"] p {
 }
 
 .post-title {
+  color: var(--c-navy-900);
   line-height: 1.2;
   padding: 1.75rem 2rem;
   font-size: clamp(1.5rem, 1vw + 0.5rem, 2.5rem);
@@ -66,6 +82,8 @@ section[class~="is-loading"] p {
 
 .post-details > p {
   padding: 1rem;
+  font-size: var(--fs-14);
+  color: var(--c-dark-grayish-blue);
 }
 
 .post-date,
@@ -78,6 +96,25 @@ section[class~="is-loading"] p {
 .post-date,
 .post-tag {
   border-right: 1px solid var(--c-grayish-blue);
+}
+
+.summary-title {
+  font-weight: bold;
+  font-size: var(--fs-20);
+}
+
+.summary-section ul,
+.summary-section ol {
+  padding-inline: 2rem;
+}
+
+.summary-section p:not(.summary-title) {
+  margin-block-start: 0.5rem;
+  padding-inline: 2rem;
+}
+
+.summary-section li {
+  margin-block-start: 0.5rem;
 }
 
 @media (width < calc(1024/16 * 1rem)) {
@@ -95,8 +132,11 @@ section[class~="is-loading"] p {
     border-top: 1px solid var(--c-grayish-blue);
   }
 
-  .post-details {
-    font-size: var(--fs-14);
+  .summary-section {
+    width: 100%;
+  }
+  .summary-title {
+    font-size: var(--fs-18);
   }
 }
 
@@ -122,5 +162,19 @@ section[class~="is-loading"] p {
     grid-column: span 2;
     border-right: unset;
     border-bottom: unset;
+  }
+
+  .summary-section {
+    padding: 1rem;
+    font-size: var(--fs-14);
+  }
+
+  .summary-title {
+    font-size: var(--fs-16);
+  }
+
+  .summary-section ul,
+  .summary-section ol {
+    font-size: var(--fs-14);
   }
 }

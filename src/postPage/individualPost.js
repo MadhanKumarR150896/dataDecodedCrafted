@@ -1,23 +1,28 @@
+import { toHTML } from "@portabletext/to-html";
 import { urlFor } from "../../data/sanity";
 import dayjs from "dayjs";
+import { renderSummarySection } from "./summary";
 
 export function renderIndividualPost(individualPost) {
-  const actualUrl = `/post?p=${individualPost.slug}`;
+  if (!individualPost) {
+    return;
+  }
 
+  const actualUrl = `/post?p=${individualPost.slug}`;
   if (window.location.search !== actualUrl) {
     window.history.replaceState(null, "", actualUrl);
   }
 
-  console.log(individualPost);
   const heroSection = document.querySelector(".js-hero-section");
+  const summarySection = document.querySelector(".js-summary-section");
 
-  if (individualPost) {
-    heroSection.classList.remove("is-loading");
-    heroSection.innerHTML = renderHeroSection(individualPost);
-  }
+  heroSection.innerHTML = renderHeroSection(individualPost);
+
+  summarySection.innerHTML = renderSummarySection(individualPost.summary);
 }
 
 function renderHeroSection(post) {
+  document.querySelector(".js-hero-section").classList.remove("is-loading");
   return `
     <div class="post-main">
       <div class="image-container">
