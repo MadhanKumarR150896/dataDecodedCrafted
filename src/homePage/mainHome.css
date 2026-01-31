@@ -199,7 +199,7 @@ div[class~="is-loading"] p {
 }
 
 .n-brick-layout {
-  width: clamp(calc(204 / 16 * 1rem), 25vw - 3rem, calc(280 / 16 * 1rem));
+  width: clamp(calc(204 / 16 * 1rem), 24vw - 2.5rem, calc(276 / 16 * 1rem));
 }
 
 .f-brick-layout,
