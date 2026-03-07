@@ -2,6 +2,10 @@
 
 A blog built for a client to share technical insights about **Databricks** and data engineering. This project was designed to be easy for the client to manage content independently.
 
+Demo Link: https://dev-datadecodedcrafted.onrender.com
+
+**Please check out the sample images at the bottom**
+
 ## Tech Stack
 
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
