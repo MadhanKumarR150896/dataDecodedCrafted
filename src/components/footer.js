@@ -11,7 +11,7 @@ class GlobalFooter extends HTMLElement {
             <img class="linkedin-icon" src="/images/linkedin-icon.svg" width="100" height="100" alt="LinkedIn_Icon">
           </a>
 
-          <p>&copy; 2025 Data Decoded & Crafted &#124; All rights reserved</p>
+          <p>&copy; 2026 Data Decoded & Crafted &#124; All rights reserved</p>
         </div>
       </footer>
     `;

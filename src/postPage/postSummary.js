@@ -59,19 +59,17 @@ const summaryComponent = {
   },
 };
 
-export function renderSummarySection(summary) {
-  const summarySection = document.querySelector(".js-summary-section");
+export function renderSummarySection(summary, section) {
+  section.classList.remove("is-loading");
 
-  summarySection.classList.remove("is-loading");
-
-  const postHtml = toHTML(summary, {
+  const summaryHtml = toHTML(summary, {
     components: summaryComponent,
   });
 
-  if (!postHtml) {
-    summarySection.remove();
+  if (!summaryHtml) {
+    section.remove();
     return;
   }
 
-  return postHtml;
+  return summaryHtml;
 }

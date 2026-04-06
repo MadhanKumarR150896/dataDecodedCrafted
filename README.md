@@ -1,8 +1,8 @@
 # dataDecodedCrafted
 
-A blog built for a client to share technical insights about **Databricks** and data engineering. This project was designed to be easy for the client to manage content independently.
+Built a fully responsive blog for a client to share technical insights about **Databricks** and data engineering. Integrated **Sanity.io** as headless CMS, enabling independent content management without developer involvement.
 
-Demo Link: https://dev-datadecodedcrafted.onrender.com
+Link: https://dev-datadecodedcrafted.onrender.com
 
 **Please check out the sample images at the bottom**
 
@@ -13,29 +13,10 @@ Demo Link: https://dev-datadecodedcrafted.onrender.com
 
 ## Features
 
-- **Headless Architecture:** Separates the frontend code from the content.
-- **Dynamic Content:** Fetches blog posts and content in real-time using Sanity's GROQ query.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
-- **Client-Friendly Editing:** Built a Sanity Studio with custom schema so the client can write, edit and post updates without touching the code.
-
-## Overview
-
-### HomePage
-
-- Has three sections --> Featured, New and Recent
-- Featured Section --> The client can just make a post as featured with just a toggle in the sanity studio and it will render in the featured section
-- New --> The last two posts published by the client will be displayed
-- Recent --> A total of 8 posts excluding the new posts will be displayed
-- Mocked data for now to give an outlook for the site
-
-#### Search Section
-
-- Will fetch upto 4 posts based on user input with a debouncer effect in a dropdown.
-
-### PostPage --> **Work in Progress**
-
-- The client can write content, code snippets, upload images and videos through sanity studio
-- Data will be fetched and html will be dynamically built
+- **Headless architecture:** Separates the frontend from the content.
+- **Search feature:** Real-time search with debounce optimisation to reduce redundant API calls, will fetch upto 4 posts based on user input by querying Sanity backend via GROQ
+- **Client-Friendly CMS:** Built a **Custom Sanity Studio** with modular content blocks supporting rich-text rendering, syntax-highlighted code snippets, and multimedia assets.
+- **Featured section:** The client can mark a post as featured with a toggle in the sanity studio.
 
 ## Author
 
@@ -44,8 +25,7 @@ Demo Link: https://dev-datadecodedcrafted.onrender.com
 
 ## Acknowledgments
 
-- Youtuber: [@SuperSimpleDev](https://www.youtube.com/@SuperSimpleDev) --> **@SuperSimpleDev** - His videos and conceptual coaching has been my go to ever since i started with frontend
-- Youtuber: [@TheCoderCoder](https://www.youtube.com/@TheCoderCoder) --> **@TheCoderCoder** - She taught me that it is not bad to make mistakes while learning and creating something
+- Youtuber: [@SuperSimpleDev](https://www.youtube.com/@SuperSimpleDev) --> **@SuperSimpleDev** - His videos and conceptual teaching has been my go to ever since i started with frontend.
 
 ## ScreenShots
 
@@ -57,6 +37,6 @@ Demo Link: https://dev-datadecodedcrafted.onrender.com
 
 ### Headless CMS - Sanity Studio
 
-|                   View 1                   |                   View 2                   |                   View 3                   |
-| :----------------------------------------: | :----------------------------------------: | :----------------------------------------: |
-| ![View 1](/src/assets/Sanity_Studio_1.png) | ![View 2](/src/assets/Sanity_Studio_2.png) | ![View 3](/src/assets/Sanity_Studio_3.png) |
+|                  View 1                  |                  View 2                  |                  View 3                  |                  View 4                  |
+| :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
+| ![View 1](/src/assets/Studio_view_1.png) | ![View 2](/src/assets/Studio_view_2.png) | ![View 3](/src/assets/Studio_view_3.png) | ![View 4](/src/assets/Studio_view_4.png) |

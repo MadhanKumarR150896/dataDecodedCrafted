@@ -1,5 +1,6 @@
 .main {
-  margin-block: 2.5rem;
+  margin-block-start: 2.5rem;
+  margin-block-end: 2rem;
   row-gap: 2rem;
 }
 
@@ -12,6 +13,33 @@
   padding: 2rem;
   margin-inline: auto;
   width: 75%;
+}
+
+.content-section {
+  background-color: var(--c-oat-light);
+  padding: 2rem;
+}
+
+.content-image-container,
+.content-video-container,
+.content-code-container {
+  background-color: var(--c-oat-medium);
+  padding: 1rem;
+  margin-inline: auto;
+  width: 90%;
+}
+
+.content-code-container {
+  padding-inline: 2rem;
+}
+
+.content-code-container pre {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.content-code-container code {
+  display: block;
 }
 
 .summary-section[class~="is-loading"] {
@@ -59,7 +87,10 @@ section[class~="is-loading"] li {
   border-right: 1px solid var(--c-grayish-blue);
 }
 
-.post-image {
+.post-image,
+.content-image-container img,
+.content-video-container iframe,
+.content-video-container video {
   width: 100%;
   height: auto;
   aspect-ratio: 2 / 1;
@@ -104,7 +135,9 @@ section[class~="is-loading"] li {
 }
 
 .summary-section ul,
-.summary-section ol {
+.summary-section ol,
+.content-section ul,
+.content-section ol {
   padding-inline: 2rem;
 }
 
@@ -113,8 +146,33 @@ section[class~="is-loading"] li {
   padding-inline: 2rem;
 }
 
-.summary-section li {
+.summary-section li,
+.content-section li {
   margin-block-start: 0.5rem;
+}
+
+.content-section div {
+  margin-block: 2rem;
+}
+
+.content-section p {
+  padding-inline-start: 1rem;
+  margin-block: 1rem;
+}
+
+.content-section a {
+  color: var(--c-navy-900);
+}
+
+.content-section a:visited {
+  color: black;
+}
+
+.content-section h2,
+.content-section h3,
+.content-section h4,
+.content-section h5 {
+  margin-block: 1rem;
 }
 
 @media (width < calc(1024/16 * 1rem)) {
@@ -132,7 +190,10 @@ section[class~="is-loading"] li {
     border-top: 1px solid var(--c-grayish-blue);
   }
 
-  .summary-section {
+  .summary-section,
+  .content-image-container,
+  .content-video-container,
+  .content-code-container {
     width: 100%;
   }
   .summary-title {
@@ -164,7 +225,8 @@ section[class~="is-loading"] li {
     border-bottom: unset;
   }
 
-  .summary-section {
+  .summary-section,
+  .content-section {
     padding: 1rem;
     font-size: var(--fs-14);
   }
@@ -173,8 +235,11 @@ section[class~="is-loading"] li {
     font-size: var(--fs-16);
   }
 
-  .summary-section ul,
-  .summary-section ol {
-    font-size: var(--fs-14);
+  .content-section h2 {
+    font-size: var(--fs-20);
+  }
+
+  .content-section h3 {
+    font-size: var(--fs-16);
   }
 }
