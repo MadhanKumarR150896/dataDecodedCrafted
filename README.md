@@ -2,7 +2,7 @@
 
 Built a fully responsive blog for a client to share technical insights about **Databricks** and data engineering. Integrated **Sanity.io** as headless CMS, enabling independent content management without developer involvement.
 
-Link: https://dev-datadecodedcrafted.onrender.com
+Link: https://ddc.madkum.com/
 
 **Please check out the sample images at the bottom**
 
