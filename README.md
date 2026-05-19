@@ -20,8 +20,8 @@ Link: https://ddc.madkum.com/
 
 ## Author
 
-- GitHub: [@MadhanKumarR150896](https://github.com/MadhanKumarR150896)
-- LinkedIn: [@Madhan Kumar Ranganathan](https://www.linkedin.com/in/madhan-kumar-ranganathan-003359271/)
+- LinkedIn: [@madhankumarr150896](https://www.linkedin.com/in/madhankumarr150896/)
+- Mail: madhankumar150896@outlook.com
 
 ## Acknowledgments
 
